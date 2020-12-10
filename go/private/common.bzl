@@ -14,6 +14,7 @@
 
 go_exts = [
     ".go",
+    ".syso"
 ]
 
 asm_exts = [
