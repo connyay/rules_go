@@ -29,7 +29,6 @@ hdr_exts = [
     ".hpp",
     ".hxx",
     ".inc",
-    ".syso",
 ]
 
 c_exts = [
@@ -65,6 +64,7 @@ cgo_exts = [
     ".hh",
     ".hpp",
     ".hxx",
+    ".syso",
     ".inc",
     ".m",
     ".mm",
