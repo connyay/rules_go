@@ -65,7 +65,6 @@ cgo_exts = [
     ".hh",
     ".hpp",
     ".hxx",
-    ".syso",
     ".inc",
     ".m",
     ".mm",
