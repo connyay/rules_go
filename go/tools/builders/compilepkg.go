@@ -387,6 +387,16 @@ func compileArchive(
 		}
 	}
 
+	var sysoFiles []string
+	for _, src := range srcs.sysoSrcs {
+		sysoFiles = append(sysoFiles, src.filename)
+	}
+	if len(sysoFiles) > 0 {
+		if err := appendFiles(goenv, outPath, sysoFiles); err != nil {
+			return err
+		}
+	}
+
 	// Check results from nogo.
 	nogoStatus := nogoNotRun
 	if nogoChan != nil {

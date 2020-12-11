@@ -21,6 +21,7 @@ load(
     "asm_exts",
     "cgo_exts",
     "go_exts",
+    "syso_exts",
 )
 load(
     "//go/private:providers.bzl",
@@ -80,7 +81,7 @@ def _go_binary_impl(ctx):
 _go_binary_kwargs = {
     "implementation": _go_binary_impl,
     "attrs": {
-        "srcs": attr.label_list(allow_files = go_exts + asm_exts + cgo_exts),
+        "srcs": attr.label_list(allow_files = go_exts + asm_exts + cgo_exts + syso_exts),
         "data": attr.label_list(allow_files = True),
         "deps": attr.label_list(
             providers = [GoLibrary],
